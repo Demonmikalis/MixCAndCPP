@@ -1,4 +1,5 @@
 #include "apple.h"
+#include <vector>
 Apple::Apple():m_nColor(APPLE_COLOR_RED)
 {
 }
@@ -11,4 +12,9 @@ void Apple::SetColor(int color)
 int Apple::GetColor(void)
 {
 	return m_nColor;
+}
+
+static void test1()
+{
+	std::vector<int> z = {1,2,3};
 }

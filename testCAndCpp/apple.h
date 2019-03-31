@@ -1,5 +1,6 @@
 #ifndef __APPLE_H__
 #define __APPLE_H__
+#include<vector>
 class Apple
 {
 public:

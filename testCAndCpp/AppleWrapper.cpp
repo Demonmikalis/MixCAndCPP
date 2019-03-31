@@ -10,12 +10,13 @@ struct tagApple
 };
 struct tagApple *GetInstance(void)
 {
-	return new struct tagApple;
+	tagApple *ta = (tagApple*)malloc(sizeof(tagApple));
+	return ta;
 }
-void ReleaseInstance(struct tagApple **ppInstance)
+void ReleaseInstance(struct tagApple *ppInstance)
 {
-	delete *ppInstance;
-	*ppInstance = 0;
+	free(ppInstance);
+	//*ppInstance = 0;
 	
 }
 void SetColor(struct tagApple *pApple, int color)
@@ -30,3 +31,5 @@ int GetColor(struct tagApple *pApple)
 #ifdef __cplusplus
 };
 #endif
+
+
